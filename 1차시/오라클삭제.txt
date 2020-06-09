@@ -1,0 +1,25 @@
+sc delete "OracleJobSchedulerXE"
+sc delete "OracleOraDB18Home3MTSRecoveryService"
+sc delete "OracleOraDB18Home3TNSListener"
+sc delete "OracleServiceXE"
+sc delete "OracleVssWriterXE"
+
+------------------------------------------------------------------
+1. Download latest version of SQL*Developer ( I downloaded 17.4.0 )
+2. Go to Tools -> Preferences -> Database -> Advanced
+3. At the bottom of the screen look for "Oracle Client" and "Use OCI/Thick driver"
+4. Press "Configure" and set Oracle client to ORACLE_HOME
+5. Press "Browse" and set TNSNAMES.ORA directory
+
+
+IO Error: The Network Adaptor could not establish the connection.
+Vendor code :17002
+
+lsnrctl status
+
+lsnrctl start
+
+명령어 창에서 hostname
+c:\>hostname
+이 이름과 listenr 이름 동일, (tnsnames.ora 도 마찬가지)
+------------------------------------------------------------------
