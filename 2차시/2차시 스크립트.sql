@@ -79,7 +79,7 @@ DESC DEPT_TEST;
 
 -- DEPT_DESC1 컬럼 추가
 ALTER TABLE DEPT_TEST
-ADD COLUMN DEPT_DESC1 VARCHAR2(80);
+ADD  DEPT_DESC1 VARCHAR2(80);
 
 -- DEPT_DESC1 컬럼 삭제
 ALTER TABLE DEPT_TEST
@@ -224,6 +224,16 @@ ORDER BY commission_pct;
 SELECT employee_id, first_name, last_name, commission_pct
 FROM employees
 ORDER BY commission_pct DESC;
+
+-- NULL을 먼저  
+SELECT employee_id, first_name, last_name, commission_pct
+  FROM employees
+ ORDER BY commission_pct NULLS FIRST;
+ 
+-- NULL을 나중에 
+SELECT employee_id, first_name, last_name, commission_pct
+  FROM employees
+ ORDER BY commission_pct NULLS LAST; 
 
 
 -- 연산자 실습
